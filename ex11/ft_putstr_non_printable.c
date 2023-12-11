@@ -6,11 +6,15 @@
 /*   By: dpalmese <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 16:25:30 by dpalmese          #+#    #+#             */
-/*   Updated: 2023/12/11 17:27:27 by dpalmese         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:32:46 by dpalmese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+#define RUB 127
+#define NUL 0
+#define US 31
 
 void	print_hex(char c)
 {
@@ -27,7 +31,7 @@ void	ft_putstr_non_printable(char *str)
 {
 	while (*str)
 	{
-		if ((*str >= 0 && *str <= 31) || *str == 127)
+		if ((*str >= NUL && *str <= US) || *str == RUB)
 		{
 			write(1, "\\", 1);
 			print_hex(*str);
