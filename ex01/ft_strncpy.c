@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpalmese <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/11 10:03:02 by dpalmese          #+#    #+#             */
+/*   Updated: 2023/12/11 10:03:36 by dpalmese         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 char	*strncpy(char *dest, const char *src, size_t n)
 {
-	int i;
+	int	i;
 
-	i = 0
+	i = 0;
 	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
@@ -11,7 +23,7 @@ char	*strncpy(char *dest, const char *src, size_t n)
 	while (i < n)
 	{
 		dest[i] = '\0';
-		i++
+		i++;
 	}
 	return (dest);
 }
