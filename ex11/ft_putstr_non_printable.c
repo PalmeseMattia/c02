@@ -6,7 +6,7 @@
 /*   By: dpalmese <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 16:25:30 by dpalmese          #+#    #+#             */
-/*   Updated: 2023/12/11 17:11:36 by dpalmese         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:27:27 by dpalmese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_putstr_non_printable(char *str)
 {
 	while (*str)
 	{
-		if (*str >= '\a' && *str <= '\r')
+		if ((*str >= 0 && *str <= 31) || *str == 127)
 		{
 			write(1, "\\", 1);
 			print_hex(*str);
