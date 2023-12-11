@@ -6,13 +6,13 @@
 /*   By: dpalmese <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 10:14:44 by dpalmese          #+#    #+#             */
-/*   Updated: 2023/12/11 10:29:01 by dpalmese         ###   ########.fr       */
+/*   Updated: 2023/12/11 16:41:03 by dpalmese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || c >= 'a' && c <= 'z')
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	return (0);
 }
@@ -55,6 +55,10 @@ void	ft_strcapitalize(char *str)
 		else if (isalpha(*str) && !capitalize)
 		{
 			*str = tolower(*str);
+		}
+		else if (isdigit(*str) && capitalize)
+		{
+			capitalize = 0;
 		}
 		else if (!(isdigit(*str) || isalpha(*str)))
 		{

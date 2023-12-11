@@ -6,7 +6,7 @@
 /*   By: dpalmese <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 10:09:35 by dpalmese          #+#    #+#             */
-/*   Updated: 2023/12/11 10:10:22 by dpalmese         ###   ########.fr       */
+/*   Updated: 2023/12/11 16:28:48 by dpalmese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_str_is_uppercase(char *str)
 			return (0);
 		str++;
 	}
-	return (0);
+	return (1);
 }
